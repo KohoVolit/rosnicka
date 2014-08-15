@@ -1,0 +1,62 @@
+{
+  "kscm": {
+    "id": "kscm",
+    "name": "Komunistická strana Čech a Moravy",
+    "abbreviation": "KSČM",
+    "children": [
+      "53e90836a874087103fa7288", "53e90836a874087103fa7281", "53e90835a874087103fa7279", "53e90837a874087103fa729f", "53e90836a874087103fa7294", "53e90836a874087103fa728e", "53e90837a874087103fa72a9"
+    ],
+    "image": "kscm.jpg",
+    "color": "#ff0000"
+  },
+  "cssd": {
+    "id": "cssd",
+    "name": "Česká strana sociálně demokratická",
+    "abbreviation": "ČSSD",
+    "children": [
+       "53e90836a874087103fa728d", "53e90835a874087103fa7274", "53e90836a874087103fa7292", "53e90837a874087103fa72a6", "53e90836a874087103fa7286", "53e90837a874087103fa72a2", "53e90836a874087103fa7284"
+    ],
+    "image": "cssd.jpg",
+    "color": "#ff8000"
+  },
+  "ods": {
+    "id": "ods",
+    "name": "Občanská demokratická strana",
+    "abbreviation": "ODS",
+    "children": [
+      "53e90836a874087103fa7285", "53e90836a874087103fa728f", "53e90835a874087103fa727e", "53e90836a874087103fa7291", "53e90837a874087103fa72a7", "53e90837a874087103fa72a3", "53e90836a874087103fa728a"
+    ],
+    "image": "ods.jpg",
+    "color": "#0000ff"
+  },
+  "vv": {
+    "id": "vv",
+    "name": "Věci veřejné",
+    "abbreviation": "VV",
+    "children": [
+      "53e90837a874087103fa72aa"
+    ],
+    "image": "vv.jpg",
+    "color": "#0088ff"
+  },
+  "top-09": {
+    "id": "top-09",
+    "name": "TOP 09",
+    "abbreviation": "TOP 09",
+    "children": [
+      "53e90837a874087103fa72a8", "53e90837a874087103fa729d"
+    ],
+    "image": "top-09.jpg",
+    "color": "#660066"
+  },
+  "nezarazeni": {
+    "id": "nezarazeni",
+    "name": "Nezařazení",
+    "abbreviation": "Nezařazení",
+    "children": [
+      "53e90836a874087103fa729b", "53e90837a874087103fa72ab", "53e90837a874087103fa72ac", "53e90836a874087103fa7295", "53e90836a874087103fa729a", "53e90837a874087103fa72a5", "53e90837a874087103fa729e"
+    ],
+    "image": "nezarazeni.jpg",
+    "color": "#444"
+  }
+}
