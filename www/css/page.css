@@ -93,7 +93,45 @@ body {
 }
 
 
+/* CHART */
+g {
+  font: 8px;
+}
 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+ /* display: none;*/
+}
+
+.line {
+  fill: none;
+  opacity: .25;
+}
+.line.active {
+  stroke-width: 5px;
+  stroke: #444
+}
+
+circle {
+  fill-opacity: 0.25;
+  stroke-opacity: 1;
+}
+
+.band {
+  fill-opacity: 0.1
+}
+.band-lower {
+  fill: #f00;
+}
+.band-upper {
+  fill: #0f0;
+}
 
 
 /* FOOTER */

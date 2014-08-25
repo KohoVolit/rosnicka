@@ -84,7 +84,7 @@ d3.hemicycle = function() {
               .attr('font-family', 'FontAwesome')
                .attr('x',function(d) {return xScale(d.x+d.widthIcon/2.8);})
                .attr('y',function(d) {return yScale(d.y+d.widthIcon/2.8);}) 
-               .attr('fill',function(d) {return d.background}) 
+               .attr('class',function(d) {return d.background}) 
                .attr('text-anchor',"middle")
                //.text('\uf005');
               .text(function(d) {if (d.single_match == 0) return ''; else return '\uf005';});

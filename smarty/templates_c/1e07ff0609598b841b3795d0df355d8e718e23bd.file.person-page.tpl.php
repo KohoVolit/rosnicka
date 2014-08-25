@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 08:26:23
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-26 01:05:14
          compiled from "../smarty/templates/person-page.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:195875890753fabd08dcd948-16364053%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -13,7 +13,7 @@ $_smarty_tpl->decodeProperties(array (
     '26f0757f5183c5af464d9c2775732ea33f7e91cf' => 
     array (
       0 => '../smarty/templates/page.tpl',
-      1 => 1408941631,
+      1 => 1409007792,
       2 => 'file',
     ),
     '4ec5991073ba49696cdec286073d59dbac1f33f3' => 
@@ -56,7 +56,7 @@ $_smarty_tpl->decodeProperties(array (
 <div class="well opaque">
 <div class="form-group col-md-8" style="float:none">
   <div class="input-group">
-<input type="text" placeholder="Hledej..." class="form-control input-lg non-opaque" id="search-input">
+<input type="text" placeholder="Hledat lidi, strany ..." class="form-control input-lg non-opaque" id="search-input">
 <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 </div>
 </div>
@@ -66,7 +66,7 @@ $_smarty_tpl->decodeProperties(array (
 <?php $_template = new Smarty_Internal_Template("person_detailed.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
 $_template->properties['nocache_hash']  = '195875890753fabd08dcd948-16364053';
 $_tpl_stack[] = $_smarty_tpl; $_smarty_tpl = $_template;?>
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 08:26:23
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-26 01:05:14
          compiled from "../smarty/templates/person_detailed.tpl" */ ?>
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
@@ -108,9 +108,9 @@ if ($_smarty_tpl->_count($_from) > 0){
          <div class="row">
        <?php }?>
        <?php $_template = new Smarty_Internal_Template("person-detail-vote.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
-$_template->properties['nocache_hash']  = '211126140653fad70f455514-57072432';
+$_template->properties['nocache_hash']  = '100043575553fbc12ab0d114-56323193';
 $_tpl_stack[] = $_smarty_tpl; $_smarty_tpl = $_template;?>
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 08:26:23
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-26 01:05:14
          compiled from "../smarty/templates/person-detail-vote.tpl" */ ?>
 <?php if (!is_callable('smarty_modifier_date_format')) include '/usr/local/lib/php/Smarty/plugins/modifier.date_format.php';
 ?><div class="col-md-6 each_vote_container">

@@ -17,7 +17,7 @@
 <div class="well opaque">
 <div class="form-group col-md-8" style="float:none">
   <div class="input-group">
-<input type="text" placeholder="Hledej..." class="form-control input-lg non-opaque" id="search-input">
+<input type="text" placeholder="Hledat lidi, strany ..." class="form-control input-lg non-opaque" id="search-input">
 <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 </div>
 </div>

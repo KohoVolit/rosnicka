@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 13:42:34
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 18:06:29
          compiled from "../../smarty/templates/vote_event-widget.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:143392906053fb20d16018d9-15200806%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:170098529753fb5f05deceb7-92645464%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -29,7 +29,7 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '143392906053fb20d16018d9-15200806',
+  'nocache_hash' => '170098529753fb5f05deceb7-92645464',
   'function' => 
   array (
   ),
@@ -55,9 +55,9 @@ $_smarty_tpl->decodeProperties(array (
   <body>
 
 <?php $_template = new Smarty_Internal_Template("vote_event.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
-$_template->properties['nocache_hash']  = '143392906053fb20d16018d9-15200806';
+$_template->properties['nocache_hash']  = '170098529753fb5f05deceb7-92645464';
 $_tpl_stack[] = $_smarty_tpl; $_smarty_tpl = $_template;?>
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 13:42:34
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 18:06:29
          compiled from "../../smarty/templates/vote_event.tpl" */ ?>
 <?php if (!is_callable('smarty_modifier_date_format')) include '/usr/local/lib/php/Smarty/plugins/modifier.date_format.php';
 ?><div class="vote-event">
@@ -73,9 +73,9 @@ $_tpl_stack[] = $_smarty_tpl; $_smarty_tpl = $_template;?>
   <div id="chart"></div>
   <div id="legend">
   <?php $_template = new Smarty_Internal_Template("vote_event-legend.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
-$_template->properties['nocache_hash']  = '201101113253fb212a7ae061-89616202';
+$_template->properties['nocache_hash']  = '98020711753fb5f05ed5367-17006905';
 $_tpl_stack[] = $_smarty_tpl; $_smarty_tpl = $_template;?>
-<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 13:42:34
+<?php /* Smarty version Smarty-3.0.7, created on 2014-08-25 18:06:29
          compiled from "../../smarty/templates/vote_event-legend.tpl" */ ?>
 <div class="row"><?php echo $_smarty_tpl->getVariable('issue')->value->author;?>
 :</div>

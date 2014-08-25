@@ -91,8 +91,10 @@
   text-align: center;
 }
 .ok-color {
-  color: #080;
+  color: #38b44a;
+  fill: #38b44a;
 }
 .ko-color {
-  color: #b00;
+  color: #df382c;
+  fill: #df382c;
 }

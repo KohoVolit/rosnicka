@@ -35,6 +35,8 @@ $text = [
   'legend_ok' => 'Hlasovali správně',
   'legend_ko' => 'Hlasovali špatně',
   'vote_event' => 'Hlasování',
+  
+  'year' => 'Rok',
 ];
 
 ?>

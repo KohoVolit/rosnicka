@@ -8,9 +8,14 @@ person (detailed)
 party (detailed) (list of people)
 vote-event
 
+LISTS:
+persons
+parties
+vote-events
+
 WIDGETS:
 person  320x200
 party   276x200
-vote-event
+vote-event 400x400
 person-chart (by year)
 party-chart (by year)

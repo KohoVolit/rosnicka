@@ -12,8 +12,11 @@
             <li>{$text['term']}: <strong>{$party['term']}</strong></li>
            <li style="font-size:2em"><strong>{$text['score']}: {$party['score']}/100</strong></li>
           </ul>
+          <div id="chart"></div>
+      {include "chart.tpl"}
         </div>
       </div>
+      
     </div> <!-- /modal-header -->
     
     <div style="clear:both;"></div>

@@ -39,7 +39,7 @@ foreach ($filtered->vote_events as $vekey => $ve) {
       $parties->$party_id = new stdClass();
     $voters->$voter_id->$vekey = $v->option;
     if (!isset($parties->$party_id->$vekey))
-      $parties->$party_id->$vekey = [];
+      $print_->$party_id->$vekey = [];
     array_push($parties->$party_id->$vekey, $v->option);
   }
   //print_r($vote_events->$vekey);die();
@@ -92,10 +92,11 @@ Select subset of vote events
 $start_date <= vote_event->start_date < $end_date
 */
 function filter_vote_events($issue, $vote_events, $start_date, $end_date) {
-  $out = $issue;
+  $out = new stdClass();
+  $out->vote_events = new stdClass();
   foreach ($issue->vote_events as $vekey => $ve) {
-    if (($vote_events->$vekey->start_date < $start_date) or ($vote_events->$vekey->start_date >= $end_date))
-      unset($out->vote_events->$vekey);
+    if (($vote_events->$vekey->start_date >= $start_date) and ($vote_events->$vekey->start_date < $end_date))
+      $out->vote_events->$vekey = $issue->vote_events->$vekey;
   }
   return $out;
 }
@@ -254,9 +255,9 @@ function term2term($term_identifier,$terms,$default) {
 }
 
 function single_match2color ($sm) {
-  if ($sm == 1) return "#080";
-  if ($sm == -1) return "#b00";
-  return "gray";
+  if ($sm == 1) return "ok-color";
+  if ($sm == -1) return "ko-color";
+  return "";
 }
 
 function single_match2opacity ($sm) {
