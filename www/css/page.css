@@ -1,0 +1,124 @@
+
+.opaque {
+  	background-color: rgba(0,0,0,0.1);
+  	border: none;
+}
+.form-group {
+    margin: 0 0;
+}
+
+@media (min-width: 768px) {
+body {
+  background: url('../image/treefrog.svg') no-repeat 100% 50px fixed;
+}
+.form-group {
+    margin: 0 100px;
+}
+}
+
+
+/* PERSON */
+#infobox_info li {
+    list-style-type: none;
+}
+
+/* PARTY */
+.person, .party {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    float: left;
+    margin: 0 10px 8px 0;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+.person {
+    height: 320px;
+}
+.party {
+    height: 276px;
+}
+
+/*body {
+    font-family: sans-serif,arial,helvetica;
+}*/
+.person > div, .party > div {
+    border-color: #e7e7e7;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+.person > div {
+    height: 320px;
+}
+.party > div {
+    height: 276px;
+}
+
+
+.person h2, .party h2 {
+    color: #121212;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-decoration: none;
+}
+.person img {
+    height: 215px;
+    width: 170px;
+}
+
+.party img {
+    height: 170px;
+    width: 170px;
+}
+
+.score {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.65);
+    border-radius: 6px;
+    bottom: 70px;
+    color: #111;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1px;
+    position: absolute;
+    right: 21px;
+}
+.person-party {
+    /*font-family: sans-serif;*/
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* FOOTER */
+.bs-docs-footer {
+    border-top: 1px solid #e5e5e5;
+    color: #777;
+    margin-top: 100px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+}
+.bs-docs-footer-links {
+    color: #999;
+    margin-top: 20px;
+    padding-left: 0;
+}
+.bs-docs-footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
+.bs-docs-footer-links li:first-child {
+    padding-left: 0;
+}
+@media (min-width: 768px) {
+.bs-docs-footer p {
+    margin-bottom: 0;
+}
+}

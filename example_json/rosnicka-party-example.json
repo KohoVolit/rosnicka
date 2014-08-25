@@ -8,7 +8,8 @@ rosnicka
       "53e915b3a874087103fa72b1", "53e915b3a874087103fa72b1", ...
     ],
     "image": "kscm.jpg",
-    "color": "#ff0000"
+    "color": "#ff0000",
+    "position": -90
   },
   ...
 }

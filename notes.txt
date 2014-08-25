@@ -1,0 +1,16 @@
+PARAMETERS:
+term: 1-7, all, default: all
+person: identifier (psp), required
+party: slug, required
+
+PAGES:
+person (detailed)
+party (detailed) (list of people)
+vote-event
+
+WIDGETS:
+person  320x200
+party   276x200
+vote-event
+person-chart (by year)
+party-chart (by year)

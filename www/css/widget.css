@@ -1,0 +1,98 @@
+.person, .party {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    float: left;
+    margin: 0 10px 8px 0;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+.person {
+    height: 320px;
+}
+.party {
+    height: 276px;
+}
+
+/*body {
+    font-family: sans-serif,arial,helvetica;
+}*/
+.person > div, .party > div {
+    border-color: #e7e7e7;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+.person > div {
+    height: 320px;
+}
+.party > div {
+    height: 276px;
+}
+
+
+.person h2, .party h2 {
+    color: #121212;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-decoration: none;
+}
+.person img {
+    height: 215px;
+    width: 170px;
+}
+
+.party img {
+    height: 170px;
+    width: 170px;
+}
+
+.score {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.65);
+    border-radius: 6px;
+    bottom: 70px;
+    color: #111;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1px;
+    position: absolute;
+    right: 21px;
+}
+.person-party {
+    /*font-family: sans-serif;*/
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 2px;
+    }
+.d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+.vote-event {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.vote-event {
+  text-align: center;
+}
+.ok-color {
+  color: #080;
+}
+.ko-color {
+  color: #b00;
+}

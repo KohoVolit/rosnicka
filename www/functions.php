@@ -11,7 +11,7 @@ $people = json_decode(file_get_contents("json/people.json"));
 $partiesjson = json_decode(file_get_contents("json/parties.json"));
 // about 0.08 sec.
 
-$time_elapsed0 = microtime(true) - $start;
+echo microtime(true) - $start . "<br/>\n";
 
 $voters = new stdClass();
 $requirements = new stdClass();
@@ -74,6 +74,14 @@ function person_identifier2id($identifier,$people) {
         return $person->id;
       }
     }
+  }
+  return False;
+}
+
+function person_id2identifier($id,$people) {
+  foreach ($people->$id->identifiers as $ident) {
+    if ($ident->scheme == "psp.cz/osoby")
+      return $ident->identifier;
   }
   return False;
 }
@@ -168,6 +176,13 @@ function person_match($options, $vote_events, $requirements, $option_meaning, $l
 }
 
 /**
+Calculates single match (one person, one vote)
+*/
+function single_match($option,$pro_issue,$option_meaning,$requirement) {
+  return $pro_issue * $option_meaning->$requirement->options->$option;
+}
+
+/**
 Calculates group's (party's) match
 
 group_options: list of vote options by the persons of the group
@@ -192,7 +207,7 @@ function group_match($group_options, $vote_events, $requirements, $option_meanin
     $weight = (isset($ve->weight) ? $ve->weight : 1);
     if (isset( $group_options->$vekey)) {
       $c = count($group_options->$vekey); //so $voter_max is comparable with $max
-      echo "$c ";
+      //echo "$c ";
       foreach ($group_options->$vekey as $option) {
         $match += $ve->pro_issue * $option_meaning->$requirement->options->$option * $weight / $c;
         $voter_max += $weight / $c;
@@ -208,6 +223,46 @@ function group_match($group_options, $vote_events, $requirements, $option_meanin
 }
 
 
+
+
+function strip_term($get) {
+  $new = [];
+  foreach ($get as $key => $g) {
+    if ($key != 'term') $new[] = $key . '=' . $g;
+  }
+  return implode('&',$new);
+}
+
+function score2color($score) {
+  if ($score >= 80)
+    return "#2c851c;";
+  if ($score >= 60)
+    return "#70AA63;";
+  if ($score >= 40)
+    return "#CCC;";
+  if ($score >= 20)
+    return "#F89291;";
+  return "#EC6863;";
+}
+
+function term2term($term_identifier,$terms,$default) {
+    if (!isset($term_identifier)) return $default;
+    foreach ($terms as $term) {
+      if ($term_identifier == $term['identifier']) return $term;  
+    }
+    return $default;
+}
+
+function single_match2color ($sm) {
+  if ($sm == 1) return "#080";
+  if ($sm == -1) return "#b00";
+  return "gray";
+}
+
+function single_match2opacity ($sm) {
+  if ($sm == 0) return 0.1;
+  return 1;
+}
 
 /*$time_elapsed = microtime(true) - $start;
 echo "time: " . $time_elapsed0 . " " .$time_elapsed . "<br/>\n";*/
