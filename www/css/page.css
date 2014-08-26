@@ -50,6 +50,16 @@ body {
     padding: 5px;
     text-align: center;
 }
+
+.person > div:hover, .party > div:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.person > div:hover > a, .party > div:hover > a {
+  text-decoration: none;
+}
+
 .person > div {
     height: 320px;
 }
