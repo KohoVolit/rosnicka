@@ -2,4 +2,4 @@ dev
 dev/*
 scripts/webcache
 scripts/__pycache__
-
+smarty/templates_c
