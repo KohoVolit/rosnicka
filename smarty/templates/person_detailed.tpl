@@ -2,7 +2,7 @@
   <div class="modal-content">
     <div class="modal-header" id="infobox_header">
       <span>
-        <img width="170" height="216" style="float:left;margin-right:10px" src="{$person['image']}">
+        <img width="170" height="216" style="float:left;margin-right:10px" src="{$person['image']}" class="img-rounded">
       </span>
       <div class="row">
         <div class="col-md-8">  

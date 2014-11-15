@@ -9,7 +9,7 @@ rosnicka
     ],
     "image": "kscm.jpg",
     "color": "#ff0000",
-    "position": -90
+    "position": -90 #left-right scale (for vote-events results)
   },
   ...
 }

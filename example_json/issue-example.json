@@ -16,7 +16,8 @@ rosnicka
           "url": "http://www.psp.cz/sqw/tisky.sqw?O=6&T=1004", 
           "note": "Tisk"
         }
-      ] 
+      ],
+      "available_vote_event": true
     },
     ...
   }

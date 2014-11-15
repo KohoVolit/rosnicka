@@ -3,3 +3,4 @@ dev/*
 scripts/webcache
 scripts/__pycache__
 smarty/templates_c
+www/settings.php

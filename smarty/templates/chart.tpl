@@ -1,6 +1,10 @@
 <script>
 {include "chart-variables.tpl"}
 {literal}
+
+//tooltip
+//new Tooltip().watchElements();
+
 //limits:
 var limits = {
   'start_date': 9999,
@@ -117,7 +121,7 @@ for (key in data['series']){
       "x": datum["x"],
       "y": datum["y"],
     }
-    if ((typeof(serie["data"][k-1]) !== "undefined") && (serie["data"][k-1]["x"] + 1 == datum["x"])) {
+    if ((typeof(serie["data"][k-1]) !== "undefined")) {
       point1 = {
         "x": datum["x"],
         "y": datum["y"],
@@ -176,7 +180,8 @@ svg.selectAll('circle')
     .attr("fill", function(d) {return d.color })
     .attr("stroke", function(d) {return d.color })
     .attr("stroke-width", function(d) {if (d.size > 0.5*limits['maxsize']) return 2; else if (d.size > 0.25*limits['maxsize']) return 1; else return 0;})
-    .attr("title",function(d) {return d.name}); 
+    .attr("title",function(d) {return d.name})
+    .attr("data-tooltip",function(d) {return d.name}); 
 
 
 </script>

@@ -1,4 +1,4 @@
 {extends file='widget.tpl'}
 {block name=body}
-{include "party.tpl"}
+{include "party-widget-inner.tpl"}
 {/block}

@@ -22,8 +22,10 @@ def pro2position(pro):
 
 issue = {
     "id": "rosnicka",
-    "title": "Rosnička",
+    "title": "Poslanecká rosnička",
+    "author": "Zelený kruh",
     "phrase": "To se to zelená...",
+    "score": "Zelené hlasy",
     "vote_events": {}
 }
 i = 0   #last term only
@@ -48,8 +50,8 @@ for row in spreadsheet["feed"]["entry"]:
         issue["vote_events"][item["identifier"]] = item
     i = i + 1
     # last term only:
-    if (i > 39):
-        break
+#    if (i > 39):
+#        break
 
 with open("../www/json/issue.json", "w") as outfile:
     json.dump(issue,outfile)

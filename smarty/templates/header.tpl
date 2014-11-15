@@ -14,9 +14,13 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">{$text['terms']} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{$header['link_without_term']}">{$text['all_terms']}</a></li>
-            <li class="divider"></li>
+            {$lasttype = ''}
             {foreach $header['terms'] as $key=>$term}
-            <li><a href="{$header['link_without_term']}&term={$term['identifier']}">{$term['name']}</a></li>
+              {if ($lasttype != $term->type)}
+              <li class="divider"></li>
+              {$lasttype = $term->type}
+              {/if}
+            <li><a href="{$header['link_without_term']}&term={$term->identifier}">{$term->name}</a></li>
             {/foreach}
           </ul>
         </li>

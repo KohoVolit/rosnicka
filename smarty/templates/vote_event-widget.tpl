@@ -6,5 +6,5 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 {/block} 
 {block name=body}
-{include "vote_event.tpl"}
+{include "vote_event-widget-body.tpl"}
 {/block}

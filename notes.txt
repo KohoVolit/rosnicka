@@ -6,7 +6,8 @@ party: slug, required
 PAGES:
 person (detailed)
 party (detailed) (list of people)
-vote-event
+vote-event (detailed)
+front-page
 
 LISTS:
 persons
@@ -19,3 +20,5 @@ party   276x200
 vote-event 400x400
 person-chart (by year)
 party-chart (by year)
+
+
