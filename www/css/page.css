@@ -32,13 +32,13 @@ body {
     margin: 0 10px 8px 0;
     position: relative;
     text-align: center;
-    width: 200px;
+    width: 123px;
 }
 .person {
-    height: 320px;
+    height: 185px;
 }
 .party {
-    height: 276px;
+    height: 185px;
 }
 
 /*body {
@@ -61,44 +61,44 @@ body {
 }
 
 .person > div {
-    height: 320px;
+    height: 185px;
 }
 .party > div {
-    height: 276px;
+    height: 185px;
 }
 
 
 .person h2, .party h2 {
     color: #121212;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 8px;
     text-decoration: none;
 }
 .person img {
-    height: 215px;
-    width: 170px;
+    height: 132px;
+    width: 104px;
 }
 
 .party img {
-    height: 170px;
-    width: 170px;
+    height: 104px;
+    width: 104px;
 }
 
 .score {
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.65);
     border-radius: 6px;
-    bottom: 70px;
+    bottom: 16px;
     color: #111;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     padding: 1px;
     position: absolute;
-    right: 21px;
+    right: 10px;
 }
 .person-party {
     /*font-family: sans-serif;*/
-    font-size: 18px;
+    font-size: 10px;
     font-weight: bold;
 }
 
@@ -133,6 +133,12 @@ body {
 .ko-color {
   color: #df382c;
   fill: #df382c;
+}
+
+#chart {
+  width: 400;
+  height: 205;
+  margin-top: 20px;
 }
 
 /* CHART */
@@ -220,4 +226,56 @@ circle {
 .bs-docs-footer p {
     margin-bottom: 0;
 }
+}
+
+/* FILTER */
+.tt-dropdown-menu{
+    width: 102%;
+}
+.tt-query, .tt-hint {
+    border: 2px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    outline: medium none;
+    padding: 8px 12px;
+    width: 396px;
+}
+.typeahead {
+    background-color: #FFFFFF;
+    height: 100%;
+}
+.typeahead:focus {
+    border: 2px solid #0097CF;
+}
+.tt-query {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+    color: #999999;
+}
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*margin-top: 12px;*/
+    padding: 8px 0;
+    width: 422px;
+}
+.tt-suggestion {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 3px 20px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+.tt-suggestion p {
+    margin: 0;
+}
+.twitter-typeahead{
+     width: 100%;
 }

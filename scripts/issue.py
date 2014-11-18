@@ -23,6 +23,7 @@ def pro2position(pro):
 issue = {
     "id": "rosnicka",
     "title": "Poslanecká rosnička",
+    "organization": "Poslanecká sněmovna",
     "author": "Zelený kruh",
     "phrase": "To se to zelená...",
     "score": "Zelené hlasy",

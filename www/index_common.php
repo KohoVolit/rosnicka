@@ -70,7 +70,7 @@ foreach ($filtered_issue->vote_events as $vekey => $ve) {
 }
 
 $parl['score']  = round(group_match($parliament, $filtered_issue->vote_events, $requirements, $option_meaning));
-$parl['name'] = $issue->title;
+$parl['name'] = $issue->organization;
 $parl['term'] = $term->name;
 
 //parties

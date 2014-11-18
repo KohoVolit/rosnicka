@@ -6,6 +6,6 @@ include_once('include.php');
 
 include_once('vote-events_common.php');
 
-$smarty->display('vote-events-page.tpl');
+$smarty->display('vote_events-page.tpl');
 
 ?>

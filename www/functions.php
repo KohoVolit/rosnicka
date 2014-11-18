@@ -286,7 +286,7 @@ function single_match2opacity ($sm) {
 }
 
 function person_last_term_start_year ($person, $terms, $term) {
-  //if it is a term, use it, if it is a year, find it corresponding
+  //if it is a term, use it, if it is a year, find it's corresponding
   if (isset($term->type)) {
     if($term->type == 'parliamentary_term') {
       $ar = explode('-',$term->start_date);
@@ -322,6 +322,8 @@ function person_last_term_start_year ($person, $terms, $term) {
       return $ar[0];
     }
   }
+  //hot fix for last period:
+  return '2013';
 }
 
 function correct_year_for_photo($year) {

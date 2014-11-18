@@ -38,7 +38,7 @@ for (year in yearso) {
 }
 
 
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
+var margin = {top: 20, right: 20, bottom: 40, left: 50},
     width = options['width'] - margin.left - margin.right,
     height = options['height'] - margin.top - margin.bottom;
 
@@ -72,6 +72,12 @@ svg.append("g")
   .attr("class", "x axis")
   .attr("transform", "translate(0," + height + ")")
   .call(xAxis)
+ .selectAll("text")
+    .attr("y", 0)
+    .attr("x", 9)
+    .attr("dy", ".35em")
+    .attr("transform", "rotate(45) translate(-5,15)")
+    .style("text-anchor", "start")
  .append("text")
   .attr("x", x(limits['end_date']))
   .attr("y", "-1em")

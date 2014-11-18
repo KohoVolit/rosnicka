@@ -10,7 +10,13 @@ $text = [
   'all_terms' => 'Všechna volební období',
   'term' => 'Období',
   
+  'parties' => 'Strany',
+  'representatives' => 'Poslanci',
+  'vote_events' => 'Hlasování',
+  
   'about' => 'O projektu',
+  
+  'select_people_parties' => 'Vybrat strany, lidi ...',
 
   'party' => 'Strana',
   
@@ -39,6 +45,7 @@ $text = [
     'not voting' => 'nehlasoval/a'
   ],
   
+  'legend' => 'Legenda',
   'legend_ok' => 'Hlasovali v souladu',
   'legend_ko' => 'Hlasovali opačně',
   'vote_event' => 'Hlasování',

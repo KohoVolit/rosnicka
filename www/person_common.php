@@ -19,7 +19,7 @@ if (!$person_id) {
     $error = set_error('person_unknown_identifier_warning',$smarty,$text);
     return;
 }
-  
+
 
 // term
 $default_term = new StdClass();
@@ -34,13 +34,12 @@ else
 if (isset($term->start_date))
     $start_date = $term->start_date;
 else
-    $start_date = '1000-01-01';
+    $start_date = '1000-01-01 00:00:00';
 if (isset($term->end_date))
     $end_date = $term->end_date;
 else
-    $end_date = '9999-12-31';   
+    $end_date = '9999-12-31 23:59:59';   
 $filtered_issue = filter_vote_events($issue, $vote_events, $start_date, $end_date);
-
 
 // prepare voter's options (votes):
 $requirements = new stdClass();
@@ -73,16 +72,11 @@ foreach ($filtered_issue->vote_events as $vekey => $ve) {
     $last_vote_event = $vote_events->$vekey;
     if (isset ($this_group_id))
       $last_group_id = $this_group_id;
-    else {
-       $error = set_error('person_no_vote-events_warning',$smarty,$text);
-       return;
-    }
   }
   if ($vote_events->$vekey->start_date > $last_vote_event->start_date)
     if (isset($this_group_id))
       $last_group_id = $this_group_id;
 }
-
 if (!isset($last_group_id)) {
     $error = set_error('person_no_vote-events_warning',$smarty,$text);
     return;

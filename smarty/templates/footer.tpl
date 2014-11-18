@@ -1,24 +1,13 @@
 <footer role="contentinfo" class="bs-docs-footer">
 
-    <p>Some text.</p>
+    <p>Poslanecká rosnička.</p>
     <ul class="bs-docs-footer-links muted">
-      <li>Currently v3.2.0</li>
+      <li><a href="http://creativecommons.org/licenses/by/4.0/">CC-BY</a></li>
       <li>·</li>
-      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="http://www.zelenykruh.cz">Zelený kruh</a></li>
       <li>·</li>
-      <li><a href="../getting-started/#examples">Examples</a></li>
+      <li><a href="http://kohovolit.eu">KohoVolit.eu</a></li>
       <li>·</li>
-      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
-      <li>·</li>
-      <li><a href="../about/">About</a></li>
-      <li>·</li>
-      <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-      <li>·</li>
-      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-      <li>·</li>
-      <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
-      <li>·</li>
-      <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+      <li><a href="https://github.com/KohoVolit/rosnicka/">GitHub</a></li>
     </ul>
-  </div>
 </footer>

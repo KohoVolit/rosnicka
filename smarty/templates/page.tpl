@@ -8,20 +8,22 @@
     <link rel="stylesheet" href="css/page.css">
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type='text/javascript' src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/filter.js"></script>
 {block name=additionalHead}{/block} 
   </head>
   <body>
 {include "header.tpl"}
 <div class="container">
-<div class="well opaque">
-<div class="form-group col-md-8" style="float:none">
-  <div class="input-group">
-<input type="text" placeholder="Hledat lidi, strany ..." class="form-control input-lg non-opaque" id="search-input">
-<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-</div>
-</div>
-</div>
+    <div class="well opaque">
+        <div class="form-group col-md-8" style="float:none">
+            <div class="input-group">
+                <input type="texst" placeholder="{$text['select_people_parties']}" class="form-control input-lg non-opaque typeahead" id="search-input">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            </div>
+        </div>
+    </div>
 </div>
 {block name=body}{/block}  
 {include "footer.tpl"}
