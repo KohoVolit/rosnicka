@@ -8,6 +8,6 @@
         {/if}
         <li style="font-size:2em"><strong>{$issue->score}: {$parliament['score']}&nbsp;%</strong></li>
     </ul>
-    <!--<div id="chart"></div>-->
+    <div id="chart"></div>
   </div>
 </div> <!-- /row -->

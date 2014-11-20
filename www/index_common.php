@@ -140,7 +140,7 @@ foreach ($parties as $party_slug => $party) {
 
 $chart_options = new stdClass();
 $chart_options->width = 800;
-$chart_options->height = 150;
+$chart_options->height = 250;
 $chart_options->ylabel = '';//$issue->score;
 $chart_options->xlabel = $text['year'];
 

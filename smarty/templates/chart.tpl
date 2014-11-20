@@ -140,7 +140,7 @@ for (key in data['series']){
         siz = 1;
       else if (typeof(datum["size"]) === "undefined")
         siz = 1;
-      else siz = Math.min(serie["data"][k-1]["size"],datum["size"]);
+      else siz = 1;//Math.min(serie["data"][k-1]["size"],datum["size"]);
       point0["size"] = siz;
       if (typeof(datum["color"]) !== "undefined") point0["color"] = datum["color"];
       else if (typeof(serie["color"]) !== "undefined") point0["color"] = serie["color"];
