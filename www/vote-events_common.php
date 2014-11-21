@@ -49,7 +49,6 @@ foreach ($filtered_issue->vote_events as $vekey => $ve) {
 usort($filtered_issue_sorted, function($a, $b) {
     return strtotime($b->start_date) - strtotime($a->start_date);
 });
-
 $smarty->assign('issue',$issue);
 $smarty->assign('vote_events',$filtered_issue_sorted);
 $smarty->assign('tag',$tag);

@@ -9,6 +9,8 @@
 {block name=additionalHead}{/block} 
   </head>
   <body>
+    <div class="text-center">
 {block name=body}{/block}  
+    </div>
   </body>
 </html>

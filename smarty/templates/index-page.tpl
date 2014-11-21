@@ -1,7 +1,7 @@
 {extends file='page.tpl'}
 {block name=additionalHead}
 <script src="http://d3js.org/d3.v3.js"></script>
-<script src="js/d3.tooltip.js"></script>
+<script src="js/d3.tip.js"></script>
 {/block} 
 {block name=body}
 <div class="modal-dialog modal-lg">

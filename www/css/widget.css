@@ -92,12 +92,15 @@
       left: 0;
     }
 
+
+
 .vote-event {
   width: 400px;
   height: 475px;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
 }
+
 .vote-event {
   text-align: center;
 }
@@ -111,4 +114,51 @@
 }
 #vote-event-legend: {
     margin: 0;
+}
+
+
+.chart-legend {
+  padding-left: 60px;
+}
+/* CHART */
+g {
+  font: 8px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+ /* display: none;*/
+}
+
+.line {
+  fill: none;
+  opacity: .25;
+}
+.line.active {
+  stroke-width: 5px;
+  stroke: #444
+}
+
+circle {
+  fill-opacity: 0.5;
+  stroke-opacity: 1;
+}
+circle:hover {
+  fill-opacity: 1;
+}
+
+.band {
+  fill-opacity: 0.1
+}
+.band-lower {
+  fill: #f00;
+}
+.band-upper {
+  fill: #0f0;
 }

@@ -1,13 +1,13 @@
 <?php
 /**
-about
+widgets
 */
 
 $widget = true;
 include_once('../settings.php');
 include_once('../include.php');
 
-$html = file_get_contents("methodology.html");
+$html = file_get_contents("widgets.html");
 
 
 $lwt_ar = explode('/',$header['link_without_term']);

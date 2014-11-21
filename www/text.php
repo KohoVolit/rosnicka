@@ -6,6 +6,16 @@ $text = [
   'lang' => 'cs',
   'locale' => 'cs_CZ.utf8',
 
+  'author' => 'KohoVolit.eu, Zelený kruh',
+  'description' => 'Poslanecká rosnička',
+  'keywords' => 'hlasování, sněmovna, poslanecká rosnička',
+  //fb
+  'og:image' => 'http://volebnikalkulacka.cz/image/treefrog.jpg',
+  'og:title' => 'Poslanecká rosnička',
+  'og:url' => 'http://rosnicka.zelenykruh.cz',
+  'og:site_name' => 'Poslanecká rosnička',
+  'author_link' => 'http://kohovolit.eu',
+
   'terms' => 'Období',
   'all_terms' => 'Všechna volební období',
   'term' => 'Období',
@@ -14,6 +24,7 @@ $text = [
   'representatives' => 'Poslanci',
   'vote_events' => 'Hlasování',
   
+  'widgets' => 'Widgety',
   'about' => 'O projektu',
   
   'select_people_parties' => 'Vybrat strany, lidi ...',

@@ -117,6 +117,7 @@ if (isset($people->$person_id->gender))
 
 // by years
 $years = [];
+$period_names = [];
 foreach ($filtered_issue->vote_events as $vekey => $ve) {
   $y = date('Y', strtotime($vote_events->$vekey->start_date));
   $years[$y] = $y;
@@ -134,6 +135,7 @@ foreach ($years as $year) {
   if ((count((array)$filtered->vote_events) > 0) and ($sc !== false)) {
     $ys->size = 50;
     $year_scores[] = $ys;
+    $period_names[$year] = (string) $year;
   }
 }
 
@@ -161,6 +163,9 @@ else
 
 //smarty
 //print_r($start_year );die();
+$smarty->assign('path',$path);
+$smarty->assign('period_type', json_encode("year"));
+$smarty->assign('period_names',json_encode($period_names));
 $smarty->assign('series',json_encode($series));
 $smarty->assign('chart_options',json_encode($chart_options));
 $smarty->assign('show_chart',$show_chart);

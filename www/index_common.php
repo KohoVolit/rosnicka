@@ -21,10 +21,13 @@ foreach ($partiesjson as $pkey => $party) {
 $default_term = new StdClass();
 $default_term->identifier = '';
 $default_term->name = $text['all_terms'];
-if (isset($_GET['term']))
+if (isset($_GET['term'])) {
   $term = term2term($_GET['term'],$header['terms'],$default_term);
-else
+  $term_year = 'year'; 
+} else {
   $term = $default_term;
+  $term_year = 'term';
+}
 
 //filter vote events
 if (isset($term->start_date))
@@ -95,48 +98,91 @@ foreach ($ps as $key => $row) {
 }
 array_multisort($sorting, SORT_DESC, $ps);
 
-//by parties by years
+//by parties by years or terms
 $series = [];
 $years = [];
-foreach ($filtered_issue->vote_events as $vekey => $ve) {
-  $y = date('Y', strtotime($vote_events->$vekey->start_date));
-  $years[$y] = $y;
+if ($term_year == 'year') {
+    foreach ($filtered_issue->vote_events as $vekey => $ve) {
+      $y = date('Y', strtotime($vote_events->$vekey->start_date));
+      $years[$y] = $y;
+    }
+    sort($years);
 }
-sort($years);
 
 $max_year_scores = 0;
 foreach ($parties as $party_slug => $party) {
     $year_scores = [];
-    foreach ($years as $year) {
-      $filtered = filter_vote_events($filtered_issue, $vote_events, $year.'-01-01', $year.'-12-31');
-      $sc = group_match($party, $filtered->vote_events, $requirements, $option_meaning);
-      //last vote event:
-      $voted = 0;
-      foreach ($filtered->vote_events as $vekey => $ve) {
-        foreach ($vote_events->$vekey->votes as $vkey => $v) {
-          if (in_array($v->group_id,$partiesjson->$party_slug->children))
-            $voted++;
+    $period_names = [];
+    $count = 0;
+    if ($term_year == 'year') {
+        foreach ($years as $year) {
+          $filtered = filter_vote_events($filtered_issue, $vote_events, $year.'-01-01', $year.'-12-31');
+          $sc = group_match($party, $filtered->vote_events, $requirements, $option_meaning);
+          //last vote event:
+          $voted = 0;
+          foreach ($filtered->vote_events as $vekey => $ve) {
+            foreach ($vote_events->$vekey->votes as $vkey => $v) {
+              if (in_array($v->group_id,$partiesjson->$party_slug->children))
+                $voted++;
+            }
+          }
+          
+          $ys = new stdClass();
+          $ys->x= (integer) $year;
+          $ys->y= round($sc);
+          if (count((array)$filtered->vote_events) and ($sc !== false)) {
+            $ys->size= ceil($voted/count((array)$filtered->vote_events));
+            $year_scores[] = $ys;
+            $count += $voted;
+          }
+          $period_names[$year] = (string) $year;
         }
-      }
-      
-      $ys = new stdClass();
-      $ys->x= (integer) $year;
-      $ys->y= round($sc);
-      if (count((array)$filtered->vote_events) and ($sc !== false)) {
-        $ys->size= ceil($voted/count((array)$filtered->vote_events));
-        $year_scores[] = $ys;
+    } else {
+      foreach ($terms as $term) {
+         if ($term->type == 'parliamentary_term') {
+          $filtered = filter_vote_events($filtered_issue, $vote_events, $term->start_date, (isset($term->end_date) ? $term->end_date : '9999-12-31'));
+          $sc = group_match($party, $filtered->vote_events, $requirements, $option_meaning);
+          //last vote event:
+          $voted = 0;
+          foreach ($filtered->vote_events as $vekey => $ve) {
+            foreach ($vote_events->$vekey->votes as $vkey => $v) {
+              if (in_array($v->group_id,$partiesjson->$party_slug->children))
+                $voted++;
+            }
+          }
+          
+          $ys = new stdClass();
+          $ys->x= (integer) date('Y', strtotime($term->start_date));
+          $ys->y= round($sc);
+          if (count((array)$filtered->vote_events) and ($sc !== false)) {
+            $ys->size= ceil($voted/count((array)$filtered->vote_events));
+            $year_scores[] = $ys;
+            $count += $voted;
+          }
+          if (count((array)$filtered->vote_events)) {
+            $sd = (string) $ys->x;
+            $period_names[$sd] = $term->name;
+          }
+        }
       }
     }
     $ser = new stdClass();
     $ser->name = $partiesjson->$party_slug->name;
+    $ser->abbreviation = $partiesjson->$party_slug->abbreviation;
     $ser->title = $partiesjson->$party_slug->abbreviation;
     $ser->color = $partiesjson->$party_slug->color;
     $ser->data = $year_scores;
+    $ser->count = $count;
+    $ser->period = $term_year;
     $series[] = $ser;
     
     if (count($year_scores) > $max_year_scores)
         $max_year_scores = count($year_scores);
 }
+//sort by party:
+usort($series,function($a,$b) {
+  return ($a->count < $b->count ? 1 : ($a->count > $b->count ? -1 : 0));
+});
 
 $chart_options = new stdClass();
 $chart_options->width = 800;
@@ -145,11 +191,14 @@ $chart_options->ylabel = '';//$issue->score;
 $chart_options->xlabel = $text['year'];
 
 if ($max_year_scores < 2)
-    $show_chart = false;
+    $show_chart = true;//false;
 else
     $show_chart = true;
 
-
+$smarty->assign('path',$path);    
+$smarty->assign('period_type', json_encode($term_year));
+$smarty->assign('period_names',json_encode($period_names));
+$smarty->assign('rawseries',$series);
 $smarty->assign('series',json_encode($series));
 $smarty->assign('chart_options',json_encode($chart_options));
 $smarty->assign('show_chart',$show_chart);
@@ -157,7 +206,7 @@ $smarty->assign('header',$header);
 $smarty->assign('parties',$ps);
 $smarty->assign('parliament',$parl);
 $smarty->assign('issue',$issue);
-$smarty->assign('title','');
+$smarty->assign('title',$issue->title);
 $smarty->assign('tag',$tag);
 $smarty->assign('color',score2color(round($parl['score'])));
 

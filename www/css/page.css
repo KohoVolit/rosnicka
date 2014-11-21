@@ -167,8 +167,11 @@ g {
 }
 
 circle {
-  fill-opacity: 0.25;
+  fill-opacity: 0.5;
   stroke-opacity: 1;
+}
+circle:hover {
+  fill-opacity: 1;
 }
 
 .band {
@@ -198,6 +201,10 @@ circle {
 
 .tooltip p.only-child {
 	margin: 0px;
+}
+
+.chart-legend {
+  padding-left: 60px;
 }
 
 

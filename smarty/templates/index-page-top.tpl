@@ -11,3 +11,8 @@
     <div id="chart"></div>
   </div>
 </div> <!-- /row -->
+{if ($show_chart)}
+<div class="row">
+    {include "chart_legend.tpl"}
+</div> <!-- /row -->
+{/if}

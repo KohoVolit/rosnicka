@@ -24,12 +24,13 @@
             {/foreach}
           </ul>
         </li>
-        <li><a href="./?{$term_chunk}">{$text['parties']}</a></li>
-        <li><a href="vote-event.php?{$term_chunk}">{$text['vote_events']}</a></li>
+        <li><a href="/?{$term_chunk}">{$text['parties']}</a></li>
+        <li><a href="/vote-event.php?{$term_chunk}">{$text['vote_events']}</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./about">{$text['about']}</a></li>
+        <li><a href="/widgets/">{$text['widgets']}</a></li>
+        <li><a href="/about/">{$text['about']}</a></li>
       </ul>
     </div>
   </div>

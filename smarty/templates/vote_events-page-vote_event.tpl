@@ -10,7 +10,10 @@
 	      {$ve->start_date|date_format}
 	      {if isset($ve->links[0]->url) and ($ve->links[0]->url != '')}, <a href="{$ve->links[0]->url}">{$ve->motion->text}</a>{/if}
           <br/>
-	      {$text['weight']} ({$issue->author}): {$ve->weight}
+{*	      {$text['weight']} ({$issue->author}): {$ve->weight}*}
+           {$text['tags']}: {foreach $ve->subcategory as $subcategory}
+                <a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a>{if !$subcategory@last}, {/if}
+           {/foreach}
 	      </small>
 	    </div>
     </div>

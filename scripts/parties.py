@@ -70,13 +70,6 @@ parties = {
         "groups": ["Poslanecký klub Českomoravské unie středu"],
         "abbreviation": "ČMUS"
     },
-    "hsdms": {
-        "name": "Hnutí za samosprávnou demokracii Moravy a Slezska (Českomoravská strana středu)",
-        "color": "#e1ad21",
-        "position": -10,
-        "groups": ["Poslanecký klub Českomoravské strany středu","Poslanecký klub Hnutí za samosprávnou demokracii Moravy a Slezska","Poslanecký klub Hnutí za samosprávnou demokracii - strany Moravy a Slezska"],
-        "abbreviation": "HSDMS"
-    },
     "lb": {
         "name": "Levý blok",
         "color": "#bf0202",
@@ -130,7 +123,7 @@ parties = {
         "name": "Liberálně sociální unie",
         "color": "#50c878",
         "position": -5,
-        "groups": ["Poslanecký klub Liberálně sociální unie"],
+        "groups": ["Poslanecký klub Liberálně sociální unie","Poslanecký klub Českomoravské strany středu","Poslanecký klub Hnutí za samosprávnou demokracii Moravy a Slezska","Poslanecký klub Hnutí za samosprávnou demokracii - strany Moravy a Slezska"],
         "abbreviation": "LSU"
     },
     "csns": {

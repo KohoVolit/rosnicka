@@ -113,6 +113,7 @@ foreach ($filtered_issue->vote_events as $vekey => $ve) {
 }
 sort($years);
 $year_scores = [];
+$period_names = [];
 foreach ($years as $year) {
   $filtered = filter_vote_events($filtered_issue, $vote_events, $year.'-01-01', $year.'-12-31');
   $sc = group_match($parties->$_GET['party'], $filtered->vote_events, $requirements, $option_meaning);
@@ -131,6 +132,7 @@ foreach ($years as $year) {
   if (count((array)$filtered->vote_events) and ($sc !== false)) {
     $ys->size= ceil($voted/count((array)$filtered->vote_events));
     $year_scores[] = $ys;
+    $period_names[$year] = (string) $year;
   }
 }
 
@@ -153,6 +155,9 @@ if (count($year_scores) < 2)
 else
     $show_chart = true;
 
+$smarty->assign('path',$path);
+$smarty->assign('period_type', json_encode("year"));
+$smarty->assign('period_names',json_encode($period_names));
 $smarty->assign('series',json_encode($series));
 $smarty->assign('chart_options',json_encode($chart_options));
 $smarty->assign('show_chart',$show_chart);
