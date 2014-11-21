@@ -15,6 +15,8 @@ $text = [
   'og:url' => 'http://rosnicka.zelenykruh.cz',
   'og:site_name' => 'Poslanecká rosnička',
   'author_link' => 'http://kohovolit.eu',
+  
+  'google_analytics_code' => 'UA-57002774-1',
 
   'terms' => 'Období',
   'all_terms' => 'Všechna volební období',
