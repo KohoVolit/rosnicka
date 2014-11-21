@@ -10,7 +10,7 @@ $text = [
   'description' => 'Poslanecká rosnička',
   'keywords' => 'hlasování, sněmovna, poslanecká rosnička',
   //fb
-  'og:image' => 'http://volebnikalkulacka.cz/image/treefrog.jpg',
+  'og:image' => 'http://rosnicka.zelenykruh.cz/image/treefrog.jpg',
   'og:title' => 'Poslanecká rosnička',
   'og:url' => 'http://rosnicka.zelenykruh.cz',
   'og:site_name' => 'Poslanecká rosnička',
