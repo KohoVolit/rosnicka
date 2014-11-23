@@ -11,7 +11,10 @@
 	      {$vote->start_date|date_format}
 	      {if isset($vote->links[0]->url) and ($vote->links[0]->url != '')}, <a href="{$vote->links[0]->url}">{$vote->motion->text}</a>{/if}
           <br/>
-	      {$text['weight']} ({$issue->author}): {$vote->weight}
+{*	      {$text['weight']} ({$issue->author}): {$vote->weight}*}
+	      {$text['tags']}: {foreach $vote->subcategory as $subcategory}
+                <span class="tag label label-warning"><a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a>{if !$subcategory@last}</span>, {/if}
+           {/foreach}
 	      </small>
 	    </div>
     </div>

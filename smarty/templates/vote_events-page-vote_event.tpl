@@ -12,7 +12,7 @@
           <br/>
 {*	      {$text['weight']} ({$issue->author}): {$ve->weight}*}
            {$text['tags']}: {foreach $ve->subcategory as $subcategory}
-                <a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a>{if !$subcategory@last}, {/if}
+                <span class="tag label label-warning"><a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a>{if !$subcategory@last}</span>, {/if}
            {/foreach}
 	      </small>
 	    </div>

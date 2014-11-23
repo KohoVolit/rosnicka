@@ -10,7 +10,7 @@
             {if isset($issue->vote_events->$ve_id->subcategory)}
               <li> {$text['tags']}:
               {foreach $issue->vote_events->$ve_id->subcategory as $subcategory}
-                <a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a>{if !$subcategory@last}, {/if}
+                <span class="tag label label-warning"><a href="vote-event.php?tag={$subcategory|escape:'url'}{$term_chunk}">{$subcategory}</a></span>{if !$subcategory@last}, {/if}
               {/foreach}
               </li>
             {/if}
