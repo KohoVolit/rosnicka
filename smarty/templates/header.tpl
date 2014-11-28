@@ -30,7 +30,7 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/widgets/">{$text['widgets']}</a></li>
-        <li><a href="/about/">{$text['about']}</a></li>
+        <li><a href="/methodology/">{$text['methodology']}</a></li>
       </ul>
     </div>
   </div>

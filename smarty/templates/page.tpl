@@ -18,6 +18,7 @@
 	
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/page.css">
     <link rel="shortcut icon" title="Shortcut icon" href="http://www.zelenykruh.cz/favicon.ico" />
     

@@ -28,6 +28,7 @@ $text = [
   
   'widgets' => 'Widgety',
   'about' => 'O projektu',
+  'methodology' => 'Metodika',
   
   'select_people_parties' => 'Vybrat strany, lidi ...',
 
