@@ -1,7 +1,7 @@
 <footer role="contentinfo" class="bs-docs-footer">
 
     <p>Poslanecká rosnička.</p>
-    <p><a href="http://visegradfund.org" title="Visegrad Fund" id="footer-kohovolit-logo"><img src="/image/visegrad_logo_small.png" alt="logo Visegrad Fund" /></a></p>
+    <p><a href="http://visegradfund.org" title="Visegrad Fund" id="footer-kohovolit-logo"><img src="/image/visegrad_logo.jpg" alt="logo Visegrad Fund" /></a></p>
     <ul class="bs-docs-footer-links muted">
       <li><a href="http://creativecommons.org/licenses/by/4.0/">CC-BY</a></li>
       <li>·</li>
