@@ -20,7 +20,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/page.css">
-    <link rel="shortcut icon" title="Shortcut icon" href="http://www.zelenykruh.cz/favicon.ico" />
+    <link rel="shortcut icon" title="Shortcut icon" href="/image/favicon.ico" />
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type='text/javascript' src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
