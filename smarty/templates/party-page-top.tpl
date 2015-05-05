@@ -5,6 +5,7 @@
   <div class="col-md-9">
     <ul id="infobox_info">
         <li><h1><strong>{$party['name']}</strong></h1></li>
+        <li><h3><strong>{$text['explanation']}</strong></h3>
         <li><strong>{$party['party']->abbreviation}</strong></li>
         <li>{$text['term']}: <strong>{$party['term']}</strong></li>
         <li style="font-size:2em"><strong>{$issue->score}: {$party['score']}&nbsp;%</strong></li>

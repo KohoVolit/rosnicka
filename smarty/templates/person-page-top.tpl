@@ -5,6 +5,7 @@
   <div class="col-md-9">  
     <ul id="infobox_info">
       <li><h1><strong>{$person['name']}</strong></h1></li>
+      <li><h3><strong>{$text['explanation']}</strong></h3>
       <li>{$text['party']}: 
         {foreach $parties as $party} 
           <strong><a href="{$party->link}">{$party->name}</a></strong>{if !$party@last}, {/if}

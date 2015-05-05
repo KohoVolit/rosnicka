@@ -86,7 +86,7 @@ $text = [
     0 =>'Neutrálně'
    ],
    
-   'explanation' => 'Nejdůležitější hlasování o životním prostředí'
+   'explanation' => 'Výběr nejdůležitějších hlasování o životním prostředí'
 ];
 
 ?>
