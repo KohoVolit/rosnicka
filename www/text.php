@@ -84,7 +84,9 @@ $text = [
     1 => 'V souladu',
     -1 => 'Opačně',
     0 =>'Neutrálně'
-   ]
+   ],
+   
+   'explanation' => 'Nejdůležitější hlasování o otázkách životního prostředí'
 ];
 
 ?>

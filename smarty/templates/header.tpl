@@ -1,7 +1,7 @@
 <div class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a href="../" class="navbar-brand">{$header['name']}</a>
+      <a href="../" class="navbar-brand">{$header['name']} <small>{$text['explanation']}</small></a>
       <a href="http://zelenykruh.cz" class="navbar-brand"><img src="/image/zeleny_kruh.png"></a>
       <a href="http://kohovolit.eu" class="navbar-brand"><img src="/image/kohovolit.eu.png"></a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
