@@ -7,7 +7,7 @@
         {if ($tag != '')}
           <li>{$text['tags']}: <strong>{$tag}</strong></li>
         {/if}
-        <li style="font-size:2em"><strong>{$issue->score}: {$parliament['score']}&nbsp;%</strong></li>
+        <li><span style="font-size:2em"> <strong>{$issue->score}: {$parliament['score']}&nbsp;%</strong></span><br/> <small><i class="fa fa-info-circle"></i>{$issue->score_description}</small>
     </ul>
     <div id="chart"></div>
   </div>
