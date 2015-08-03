@@ -18,7 +18,7 @@ $header['link_without_term'] = implode('/',$lwt_ar);
 //smarty
 $smarty->assign('header',$header);
 $smarty->assign('text',$text);
-$smarty->assign('title',"about");
+$smarty->assign('title',$text['about']);
 
 $smarty->assign('html',$html);
 
