@@ -18,7 +18,7 @@ def pro2position(pro):
         return -1
     else:
         return 0
-        
+
 
 issue = {
     "id": "rosnicka",
@@ -27,7 +27,7 @@ issue = {
     "author": "Zelený kruh",
     "phrase": "To se to zelená...",
     "score": "Zelené hlasy",
-    "score_description": "'Zelené hlasy' ukazují podíl hlasů s pozitivním dopadem na životní prostředí."
+    "score_description": "'Zelené hlasy' ukazují podíl hlasů s pozitivním dopadem na životní prostředí.",
     "vote_events": {}
 }
 i = 0   #last term only

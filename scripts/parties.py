@@ -116,7 +116,7 @@ parties = {
         "name": "Úsvit přímé demokracie",
         "color": "#91b82e",
         "position": 25,
-        "groups": ["Poslanecký klub Úsvitu přímé demokracie"],
+        "groups": ["Poslanecký klub Úsvitu přímé demokracie","Poslanecký klub Úsvit - Národní Koalice"],
         "abbreviation": "Úsvit"
     },
     'lsu': {

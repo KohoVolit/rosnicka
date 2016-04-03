@@ -15,7 +15,7 @@ years = {}
 for ve in issue['vote_events']:
     vee = issue['vote_events'][ve]
     if issue['vote_events'][ve]['available_vote_event']:
-        year = datetime.datetime.strftime(datetime.datetime.strptime(vote_events[vee['identifier']]['start_date'],"%Y-%m-%d %H:%M:%S"),"%Y")
+        year = datetime.datetime.strftime(datetime.datetime.strptime(vote_events[vee['identifier']]['start_date'],"%Y-%m-%dT%H:%M:%S"),"%Y")
         years[year] = {
             "name": str(year),
             "start_date": str(year) + '-01-01 00:00:00',
@@ -23,8 +23,8 @@ for ve in issue['vote_events']:
             "identifier": year,
             "type": "year"
         }
-        start_date = datetime.datetime.strftime(datetime.datetime.strptime(vote_events[vee['identifier']]['start_date'],"%Y-%m-%d %H:%M:%S"),"%Y-%m-%d")
-        
+        start_date = datetime.datetime.strftime(datetime.datetime.strptime(vote_events[vee['identifier']]['start_date'],"%Y-%m-%dT%H:%M:%S"),"%Y-%m-%d")
+
         organization = vpapi.get("organizations",where={"classification": "chamber","founding_date":{"$lte":start_date},"$or":[{"dissolution_date":{"$gte":start_date}},{"dissolution_date": {"$exists": False}}]})
         since = organization["_items"][0]["founding_date"] + " 00:00:00"
         sinceyear =  datetime.datetime.strftime(datetime.datetime.strptime(since,"%Y-%m-%d %H:%M:%S"),"%Y")
@@ -51,7 +51,7 @@ for key in terms:
 for key in years:
     yearsli.append(years[key])
 terms = sorted(termsli, key=itemgetter('name'), reverse=True)
-years = sorted(yearsli, key=itemgetter("name"), reverse=True) 
+years = sorted(yearsli, key=itemgetter("name"), reverse=True)
 i = len(terms)
 for term in terms:
     term['identifier'] = str(i)
@@ -60,7 +60,7 @@ for term in terms:
 out = terms + years
 
 with open("../www/json/terms.json", "w") as outfile:
-    json.dump(out,outfile) 
+    json.dump(out,outfile)
 
 #127.0.0.1:5000/cz/psp/organizations?where={"classification": "chamber","founding_date":{"$lte":"2001-02-27"},"dissolution_date":{"$gte":"2001-02-27"}}
 
