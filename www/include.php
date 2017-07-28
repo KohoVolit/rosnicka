@@ -24,7 +24,7 @@ $smarty->setCompileDir($smarty_path . 'templates_c');
 include_once($path . "functions.php");
 include_once($path . "text.php");
 
-setlocale(LC_ALL, $text['locale']); 
+setlocale(LC_ALL, $text['locale']);
 
 $issue = json_decode(file_get_contents($path . "json/issue.json"));
 $terms = json_decode(file_get_contents($path . "json/terms.json"));
@@ -33,7 +33,7 @@ $terms = json_decode(file_get_contents($path . "json/terms.json"));
 $header = [
   'name' => $issue->title,
   'terms' => $terms,
-  'link_without_term' => 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'].'?'.strip_term($_GET),
+  'link_without_term' => 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'].'?'.strip_term($_GET),
 ];
 
 $smarty->assign('header',$header);

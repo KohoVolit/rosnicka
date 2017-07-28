@@ -1,8 +1,8 @@
 {extends file='page.tpl'}
 {block name=additionalHead}
-<script src="http://d3js.org/d3.v3.js"></script>
+<script src="//d3js.org/d3.v3.js"></script>
 <script src="js/d3.tip.js"></script>
-{/block} 
+{/block}
 {block name=body}
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
@@ -13,8 +13,8 @@
       {include "person-page-table.tpl"}
     </div> <!-- /modal-body-->
   </div> <!-- /modal content -->
-</div> <!-- /modal -->    
+</div> <!-- /modal -->
  {if $show_chart}
-    {include "chart.tpl"} 
-{/if}    
+    {include "chart.tpl"}
+{/if}
 {/block}

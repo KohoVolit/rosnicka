@@ -1,12 +1,12 @@
 {extends file='page.tpl'}
 {block name=additionalHead}
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="js/d3.hemicycle_rosnicka.js"></script>
     <script src="js/d3.tip.js"></script>
     <script src="js/jquery.tablesorter.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="css/tablesorter.css" rel="stylesheet">
-{/block} 
+{/block}
 {block name=body}
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
